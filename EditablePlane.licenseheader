@@ -1,0 +1,16 @@
+﻿extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+/** Copyright (c) 2019 mrma617@gmail.com
+ *  Author: %UserName%
+ *  CreateTime: %CreationYear%-%CreationMonth%-%CreationDay% %CreationTime%
+ */
+extensions: .aspx .ascx
+<%-- 
+Copyright (c) 2011 rubicon IT GmbH
+--%>
+extensions: .vb
+'Sample license text.
+extensions:  .xml .config .xsd
+<!--
+Sample license text.
+-->
