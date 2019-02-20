@@ -37,6 +37,18 @@ public class UIVertexSpawner : MonoBehaviour
         }
    }
 
+    public void ReCalculateVerticesPosition()
+    {
+        Vector2[] positions = meshEntity.GetComponent<EditablePanelMesh>().GetVerticesScreenPosition();
+        UIVertex[] allVertices = this.transform.GetComponentsInChildren<UIVertex>();
+
+        for (int vertexIndex = 0; vertexIndex < allVertices.Length; ++vertexIndex)
+        {
+            UIVertex vertex = allVertices[vertexIndex];
+            vertex.GetComponent<RectTransform>().position = positions[vertex.VertexIndex];
+        }
+    }
+
     public void AddDirtyVertex(int vertexIndex,UIVertex vertex)
     {
         dirtyVertices.Add(vertexIndex, vertex);
